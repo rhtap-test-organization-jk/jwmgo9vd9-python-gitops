@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: jwmgo9vd9-python-gitops
+  description: This is GitOps manifest for jwmgo9vd9-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: jwmgo9vd9-python
+    backstage.io/kubernetes-id: jwmgo9vd9-python 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: jwmgo9vd9-python-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:jwmgo9vd9-python
